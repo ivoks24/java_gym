@@ -17,7 +17,7 @@ public  class AppFrame extends JFrame {
     AppFrame() {
 
         this.setSize(400, 600);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
 
         title = new TitleBar();
         list = new List();
@@ -32,7 +32,7 @@ public  class AppFrame extends JFrame {
 
         addListeners();
 
-        this.setBackground(Color.DARK_GRAY);
+        this.setBackground(Color.YELLOW);
         this.setVisible(true);
     }
 
@@ -49,6 +49,7 @@ public  class AppFrame extends JFrame {
                     @Override
                     public void mousePressed(MouseEvent e) {
                         task.changeState();
+                        list.updateNumbers();
                         revalidate();
                     }
                 });

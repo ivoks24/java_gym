@@ -14,7 +14,7 @@ public class Task extends JPanel {
     Task() {
 
         this.setPreferredSize(new Dimension(40, 20));
-        this.setBackground(Color.BLACK);
+        this.setBackground(Color.BLUE);
 
         this.setLayout(new BorderLayout());
 
@@ -27,11 +27,11 @@ public class Task extends JPanel {
 
         taskName = new JTextField("Task Name");
         taskName.setBorder(BorderFactory.createEmptyBorder());
-        taskName.setBackground(Color.GRAY);
+        taskName.setBackground(Color.WHITE);
         this.add(taskName, BorderLayout.CENTER);
 
         done = new JButton("done");
-        done.setPreferredSize(new Dimension(40, 20));
+//        done.setPreferredSize(new Dimension(40, 20));
         done.setBorder(BorderFactory.createEmptyBorder());
         this.add(done, BorderLayout.EAST);
     }
@@ -52,8 +52,9 @@ public class Task extends JPanel {
 
     public void changeState() {
 
-//        this.setBackground(Color.BLACK);
-        taskName.setBackground(Color.DARK_GRAY);
+        this.setBackground(Color.green);
+        taskName.setBackground(Color.green);
         checked = true;
+        revalidate();
     }
 }
